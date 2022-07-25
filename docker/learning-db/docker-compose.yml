@@ -1,0 +1,15 @@
+version: '3'
+services:
+  learning-db:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: postgres13.7-learning-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "55432:5432"
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ./test-data:/test-data

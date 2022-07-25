@@ -1,0 +1,6 @@
+gunzip -c ./test-data/departments.csv.gz | psql -U learning-user learning_db -c "COPY departments FROM stdin DELIMITERS ',' CSV HEADER"
+gunzip -c ./test-data/employees.csv.gz | psql -U learning-user learning_db -c "COPY employees FROM stdin DELIMITERS ',' CSV HEADER"
+gunzip -c ./test-data/dept_emp.csv.gz | psql -U learning-user learning_db -c "COPY dept_emp FROM stdin DELIMITERS ',' CSV HEADER"
+gunzip -c ./test-data/dept_manager.csv.gz | psql -U learning-user learning_db -c "COPY dept_manager FROM stdin DELIMITERS ',' CSV HEADER"
+gunzip -c ./test-data/salaries.csv.gz | psql -U learning-user learning_db -c "COPY salaries FROM stdin DELIMITERS ',' CSV HEADER"
+gunzip -c ./test-data/titles.csv.gz | psql -U learning-user learning_db -c "COPY titles FROM stdin DELIMITERS ',' CSV HEADER"
