@@ -2,7 +2,9 @@
 
 ## はじめに
 
-このリポジトリはMySQLの `Employees Sample Database` をPostgreSQLに移植したものです
+- このリポジトリはデータベース学習用教材です  
+- ベースはMySQLの `Employees Sample Database` で、PostgreSQL用にスキーマ定義、テストデータを移植しています  
+- pg_hint_plan モジュールを有効化しています
 
 ### ベースにした資産
 > https://dev.mysql.com/doc/employee/en/
